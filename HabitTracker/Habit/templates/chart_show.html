@@ -58,7 +58,7 @@ function tooltipCallback(point) {
   let y = point.options('y');
 
   switch (pointName) {
-    case 'Currency':
+    case 'Test1':
       return (
         pointName +
         ': ' +
@@ -66,7 +66,7 @@ function tooltipCallback(point) {
         '<br/>Short Date: ' +
         bold(fDate(pointStart, 'd'))
       );
-    case 'Integer':
+    case 'Test2':
       return (
         pointName +
         ': ' +
@@ -74,7 +74,7 @@ function tooltipCallback(point) {
         '<br/>Long Date: ' +
         bold(fDate(pointStart, 'D'))
       );
-    case 'Decimal':
+    case 'Test3':
       return (
         pointName +
         ': ' +
@@ -82,7 +82,7 @@ function tooltipCallback(point) {
         '<br/>Month/Day Pattern: ' +
         bold(fDate(pointStart, 'M'))
       );
-    case 'Percent':
+    case 'Test4':
       return (
         pointName +
         ': ' +

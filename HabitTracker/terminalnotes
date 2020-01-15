@@ -1,0 +1,16 @@
+notes on new commands in terminal I learned for python/django
+
+
+python3 -m venv myvenv
+
+source myvenv/bin/activate
+
+sudo easy_install pipsource myvenv/bin/activate
+
+sudo pip install virtualenv
+
+python -m pip install Django
+
+python3 manage.py runserver
+
+python -m pip install --upgrade pip

@@ -34,8 +34,15 @@
 				border-style: outset;
 				background-color: #63c5da;
 			}
+
+			#btn_home{
+				margin-left: 35%;
+				margin-top: 2%;
+				color:#63c5da;
+				background-color: white;
+			}
 			#btn_add{
-				margin-left: 40%;
+				margin-left: 3%;
 				margin-top: 2%;
 				color:#63c5da;
 				background-color: white;
@@ -43,7 +50,7 @@
 
 			#btn_chart{
 				margin-top: 2vw;
-				margin-left: 40px;
+				margin-left: 3%;
 				color:#63c5da;
 				background-color: white;
 			}
@@ -53,8 +60,8 @@
 		<div>
 			<div id="header_bgImage"></div>
 			<center><h1 id="header_title">My Habit Tracker</h1></center>
+			<button class="btn btn-default" id="btn_home" data-toggle="modal" data-target="#myModal">Home</button>
 			<button class="btn btn-default" id="btn_add" data-toggle="modal" data-target="#myModal">Add a New Habit</button>
-			<button class="btn btn-default" id="btn_add" data-toggle="modal" data-target="#myModal">home</button>
 			<input type="button" class="btn btn-default" id="btn_chart">
 		</div>
 		{% block content %}

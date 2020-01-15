@@ -1,4 +1,4 @@
-#!/Users/veronicaramirez/dev/python-django/myvenv/bin/python3
+#!/Users/veronicaramirez/dev/python-django/HabitTracker/myvenv/bin/python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'virtualenv-clone==0.5.3','console_scripts','virtualenv-clone'
 __requires__ = 'virtualenv-clone==0.5.3'
 import re

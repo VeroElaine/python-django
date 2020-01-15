@@ -4,4 +4,4 @@ django-filter==2.2.0
 gunicorn==20.0.4
 pytz==2019.3
 sqlparse==0.3.0
-virtualenv==16.7.9
+virtualenv==16.7.9 

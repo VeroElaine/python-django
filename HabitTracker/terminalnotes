@@ -14,3 +14,10 @@ python -m pip install Django
 python3 manage.py runserver
 
 python -m pip install --upgrade pip
+
+
+notes that some pip commands depreciated so I looked up other ways
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
+running files to start above since easy_install doesn't work anymore
+python get-pip.py

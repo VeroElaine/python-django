@@ -60,7 +60,7 @@
 		<div>
 			<div id="header_bgImage"></div>
 			<center><h1 id="header_title">My Habit Tracker</h1></center>
-			<button class="btn btn-default" id="btn_home" data-toggle="modal" data-target="#myModal">Home</button>
+			<button class="btn btn-default" id="btn_home" data-toggle="modal" data-target="habit/">Home</button>
 			<button class="btn btn-default" id="btn_add" data-toggle="modal" data-target="#myModal">Add a New Habit</button>
 			<input type="button" class="btn btn-default" id="btn_chart">
 		</div>
@@ -165,7 +165,12 @@
 						}
 					});
 				});
+				$("#btn_home").click(function(){
+						$("#btn_home").val(localStorage.getItem("btn_value"));
+						document.location = "/habit/";
+						return;
 
+				});
 				$("#btn_chart").click(function(){
 					let btn_value =  $("#btn_chart").val();
 					localStorage.setItem("btn_value", btn_value);
@@ -182,6 +187,7 @@
 						return;
 					}
 				});
+
 			});
 		</script>
 	</body>

@@ -1,0 +1,103 @@
+{% extends "habit_show.html" %}
+{% block content %}
+<div style="margin-top:-250px;">
+<script>
+let chart = JSC.chart('chartDiv', {
+  debug: true,
+  type: 'column',
+  title_label_text:
+    'Hoever to see data for your habits',
+  legend_visible: false,
+  xAxis_defaultTick_gridLine_width: 0,
+  defaultPoint: {
+    label_visible: true,
+    tooltip: tooltipCallback
+  },
+  series: [
+    {
+      name: 'Representatives',
+      points: [
+        {
+          name: 'Test 1',
+          y: 3,
+          attributes: { start: '1/1/2020' },
+          label_text: 'Habit1  <br/>testing'
+        },
+        {
+          name: 'Test 2',
+          y: 8,
+          attributes: { start: '1/1/2020' },
+          label_text: 'Habit2 <br/>testing'
+        },
+        {
+          name: 'Test 3',
+          y: 5,
+          attributes: { start: '1/1/2020' },
+          label_text:
+            'habit3 <br/> testing'
+        },
+        {
+          name: 'Test 4',
+          y: 6,
+          attributes: { start: '1/1/2020' },
+          label_text:
+            'habit4 <br/>testing'
+        }
+      ]
+    }
+  ]
+});
+
+function tooltipCallback(point) {
+  let fDate = JSC.formatDate;
+  let fNum = JSC.formatNumber;
+  let pointStart = point.options(
+    'attributes.start'
+  );
+  let pointName = point.options('name');
+  let y = point.options('y');
+
+  switch (pointName) {
+    case 'Currency':
+      return (
+        pointName +
+        ': ' +
+        bold(fNum(y, 'c')) +
+        '<br/>Short Date: ' +
+        bold(fDate(pointStart, 'd'))
+      );
+    case 'Integer':
+      return (
+        pointName +
+        ': ' +
+        bold(fNum(y, 'n0')) +
+        '<br/>Long Date: ' +
+        bold(fDate(pointStart, 'D'))
+      );
+    case 'Decimal':
+      return (
+        pointName +
+        ': ' +
+        bold(fNum(y, 'n2')) +
+        '<br/>Month/Day Pattern: ' +
+        bold(fDate(pointStart, 'M'))
+      );
+    case 'Percent':
+      return (
+        pointName +
+        ': ' +
+        bold(fNum(y, 'p')) +
+        '<br/>Short Time Pattern: ' +
+        bold(fDate(pointStart, 't'))
+      );
+  }
+  return '';
+  function bold(txt) {
+    return '<b>' + txt + '</b>';
+  }
+}
+</script>
+<div id="chartDiv" style="max-width: 740px;height: 400px;margin: 0px auto">
+</div>
+</div>
+{% endblock %}
